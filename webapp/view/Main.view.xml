@@ -1,7 +1,19 @@
 <mvc:View
+    controllerName="swiftQRCode.swift.controller.Main"
     xmlns:mvc="sap.ui.core.mvc"
     displayBlock="true"
     xmlns="sap.m">
-        <Page id="page" title="eeeeee">
+        <Page id="page" title="Lista QR Code">
+            <subHeader>
+                <Toolbar>
+                    <SearchField width="100%" search=".onSearch"/>
+                    <ToolbarSpacer />
+                    <Button icon="sap-icon://qr-code" text="Escanear" type="Emphasized" press=".onQrCode" />
+                </Toolbar>
+            </subHeader>
+            <List items="{modelTest>/}" id="listTest">
+                <ObjectListItem title="{modelTest>OrderID}" type="Active" press=".onDetail">
+                </ObjectListItem>
+            </List>
         </Page>
 </mvc:View>
